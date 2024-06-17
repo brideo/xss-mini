@@ -6,7 +6,7 @@
 [![License](https://img.shields.io/npm/l/xss-mini)](https://github.com/brideo/xss-mini/blob/main/LICENSE)
 [![Dependencies](https://img.shields.io/david/brideo/xss-mini)](https://david-dm.org/brideo/xss-mini)
 
-`xss-mini` is a lightweight TypeScript library for sanitizing HTML input to prevent XSS (Cross-Site Scripting) attacks. It allows configurable tags and attributes to be whitelisted.
+`xss-mini` is a lightweight Javascript library for sanitizing HTML input to prevent XSS (Cross-Site Scripting) attacks. It allows configurable tags and attributes to be whitelisted.
 
 ## Installation
 
@@ -14,24 +14,7 @@
 npm install xss-mini
 ```
 
-Or with yarn
-
-```bash
-yarn add xss-mini
-```
-
-## Usage 
-
-### In TypeScript
-
-```typescript
-import xss from 'xss-mini';
-
-const userInput: string = '<h1>Title</h1> <b>Hello</b> <script>alert("XSS Attack!");</script> <a href="http://example.com" onclick="maliciousFunction()">link</a>';
-const safeHtml: string = xss(userInput);
-
-console.log(safeHtml); // Outputs: <h1>Title</h1> <b>Hello</b> <a href="http://example.com">link</a>
-```
+## Usage
 
 ### In JavaScript
 
@@ -57,8 +40,8 @@ const customAllowedAttributes = {
   '*': ['class', 'style']
 };
 
-const userInput: string = '<h1>Title</h1> <b>Hello</b> <script>alert("XSS Attack!");</script> <a href="http://example.com" onclick="maliciousFunction()">link</a>';
-const safeHtml: string = xss(userInput, customAllowedTags, customAllowedAttributes);
+const userInput = '<h1>Title</h1> <b>Hello</b> <script>alert("XSS Attack!");</script> <a href="http://example.com" onclick="maliciousFunction()">link</a>';
+const safeHtml = xss(userInput, customAllowedTags, customAllowedAttributes);
 
 console.log(safeHtml); // Outputs: <h1>Title</h1> <b>Hello</b> <a href="http://example.com">link</a>
 ```

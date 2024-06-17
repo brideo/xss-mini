@@ -1,6 +1,6 @@
 {
   "name": "xss-mini",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A lightweight library for sanitizing HTML input to prevent XSS attacks.",
   "main": "dist/sanitizeHtml.min.js",
   "types": "dist/sanitizeHtml.d.ts",
