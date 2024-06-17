@@ -2,7 +2,7 @@
 
 [![NPM version](https://img.shields.io/npm/v/xss-mini)](https://www.npmjs.com/package/xss-mini)
 [![Build Status](https://img.shields.io/github/actions/workflow/status/brideo/xss-mini/ci.yml?branch=main)](https://github.com/brideo/xss-mini/actions)
-[![Test Coverage](https://img.shields.io/coveralls/github/brideo/xss-mini)](https://coveralls.io/github/brideo/xss-mini)
+[![Test Coverage](https://coveralls.io/repos/github/brideo/xss-mini/badge.svg?branch=main)](https://coveralls.io/github/brideo/xss-mini)
 [![License](https://img.shields.io/npm/l/xss-mini)](https://github.com/brideo/xss-mini/blob/main/LICENSE)
 [![Dependencies](https://img.shields.io/david/brideo/xss-mini)](https://david-dm.org/brideo/xss-mini)
 
@@ -14,7 +14,24 @@
 npm install xss-mini
 ```
 
+Or with yarn
+
+```bash
+yarn add xss-mini
+```
+
 ## Usage 
+
+### In TypeScript
+
+```typescript
+import xss from 'xss-mini';
+
+const userInput: string = '<h1>Title</h1> <b>Hello</b> <script>alert("XSS Attack!");</script> <a href="http://example.com" onclick="maliciousFunction()">link</a>';
+const safeHtml: string = xss(userInput);
+
+console.log(safeHtml); // Outputs: <h1>Title</h1> <b>Hello</b> <a href="http://example.com">link</a>
+```
 
 ### In JavaScript
 
@@ -40,8 +57,8 @@ const customAllowedAttributes = {
   '*': ['class', 'style']
 };
 
-const userInput = '<h1>Title</h1> <b>Hello</b> <script>alert("XSS Attack!");</script> <a href="http://example.com" onclick="maliciousFunction()">link</a>';
-const safeHtml = xss(userInput, customAllowedTags, customAllowedAttributes);
+const userInput: string = '<h1>Title</h1> <b>Hello</b> <script>alert("XSS Attack!");</script> <a href="http://example.com" onclick="maliciousFunction()">link</a>';
+const safeHtml: string = xss(userInput, customAllowedTags, customAllowedAttributes);
 
 console.log(safeHtml); // Outputs: <h1>Title</h1> <b>Hello</b> <a href="http://example.com">link</a>
 ```

@@ -1,6 +1,9 @@
 # Node modules
 node_modules/
 
+# TypeScript compiled files
+dist/
+
 # Logs
 logs
 *.log
@@ -14,3 +17,6 @@ Thumbs.db
 .idea/
 .vscode/
 *.swp
+
+# Coverage directory
+coverage/
