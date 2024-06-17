@@ -4,7 +4,7 @@
 [![Build Status](https://img.shields.io/github/actions/workflow/status/brideo/xss-mini/ci.yml?branch=main)](https://github.com/brideo/xss-mini/actions)
 [![Test Coverage](https://coveralls.io/repos/github/brideo/xss-mini/badge.svg?branch=main)](https://coveralls.io/github/brideo/xss-mini)
 [![License](https://img.shields.io/npm/l/xss-mini)](https://github.com/brideo/xss-mini/blob/main/LICENSE)
-[![Dependencies](https://img.shields.io/david/brideo/xss-mini)](https://david-dm.org/brideo/xss-mini)
+[![npm bundle size](https://badgen.net/bundlephobia/minzip/dom-parser-mini)](https://bundlephobia.com/result?p=xss-mini)
 
 `xss-mini` is a lightweight Javascript library for sanitizing HTML input to prevent XSS (Cross-Site Scripting) attacks. It allows configurable tags and attributes to be whitelisted.
 
