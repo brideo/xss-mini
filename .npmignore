@@ -6,6 +6,7 @@
 !dist/sanitizeHtml.ds.ts
 !package.json
 !README.md
+!LICENSE
 
 # Ignore node_modules
 node_modules/

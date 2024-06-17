@@ -20,3 +20,7 @@ Thumbs.db
 
 # Coverage directory
 coverage/
+
+# Ignore build artifacts
+*.log
+*.tgz
