@@ -3,7 +3,7 @@
 
 # Except these files and directories
 !dist/sanitizeHtml.js
-!dist/sanitizeHtml.ds.ts
+!dist/sanitizeHtml.d.ts
 !package.json
 !README.md
 !LICENSE
