@@ -2,10 +2,10 @@
   "name": "xss-mini",
   "version": "1.0.0",
   "description": "A lightweight library for sanitizing HTML input to prevent XSS attacks.",
-  "main": "dist/sanitizeHtml.js",
+  "main": "dist/sanitizeHtml.min.js",
   "types": "dist/sanitizeHtml.d.ts",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && terser dist/sanitizeHtml.js --compress --mangle --output dist/sanitizeHtml.min.js",
     "test": "jest"
   },
   "keywords": [
@@ -20,6 +20,7 @@
     "@types/jest": "^29.5.12",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
+    "terser": "^5.31.1",
     "ts-jest": "^29.1.5",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5"

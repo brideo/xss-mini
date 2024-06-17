@@ -1,0 +1,20 @@
+# Ignore everything by default
+*
+
+# Except these files and directories
+!dist/sanitizeHtml.js
+!dist/sanitizeHtml.ds.ts
+!package.json
+!README.md
+
+# Ignore node_modules
+node_modules/
+
+# Ignore test files and configurations
+src/**/*.test.ts
+jest.config.js
+tsconfig.json
+
+# Ignore build artifacts
+*.log
+*.tgz

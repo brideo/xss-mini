@@ -14,24 +14,7 @@
 npm install xss-mini
 ```
 
-Or with yarn
-
-```bash
-yarn add xss-mini
-```
-
 ## Usage 
-
-### In TypeScript
-
-```typescript
-import xss from 'xss-mini';
-
-const userInput: string = '<h1>Title</h1> <b>Hello</b> <script>alert("XSS Attack!");</script> <a href="http://example.com" onclick="maliciousFunction()">link</a>';
-const safeHtml: string = xss(userInput);
-
-console.log(safeHtml); // Outputs: <h1>Title</h1> <b>Hello</b> <a href="http://example.com">link</a>
-```
 
 ### In JavaScript
 
@@ -57,8 +40,8 @@ const customAllowedAttributes = {
   '*': ['class', 'style']
 };
 
-const userInput: string = '<h1>Title</h1> <b>Hello</b> <script>alert("XSS Attack!");</script> <a href="http://example.com" onclick="maliciousFunction()">link</a>';
-const safeHtml: string = xss(userInput, customAllowedTags, customAllowedAttributes);
+const userInput = '<h1>Title</h1> <b>Hello</b> <script>alert("XSS Attack!");</script> <a href="http://example.com" onclick="maliciousFunction()">link</a>';
+const safeHtml = xss(userInput, customAllowedTags, customAllowedAttributes);
 
 console.log(safeHtml); // Outputs: <h1>Title</h1> <b>Hello</b> <a href="http://example.com">link</a>
 ```
