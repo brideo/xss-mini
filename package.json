@@ -1,9 +1,13 @@
 {
   "name": "xss-mini",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A lightweight library for sanitizing HTML input to prevent XSS attacks.",
   "main": "dist/sanitizeHtml.min.js",
   "types": "dist/sanitizeHtml.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brideo/xss-mini.git"
+  },
   "scripts": {
     "build": "tsc && terser dist/sanitizeHtml.js --compress --mangle --output dist/sanitizeHtml.min.js",
     "test": "jest"
